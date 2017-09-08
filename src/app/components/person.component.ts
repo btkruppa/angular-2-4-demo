@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 
 @Component({
+  selector: 'app-person',
   template: `
     <h3>A person!</h3>
 
@@ -9,6 +10,7 @@ import {Component, Input} from '@angular/core';
     <div>Company: {{person.company}}</div>
     <div>Email: {{person.email}}</div>
     <div>Address: {{person.address}}</div>
+    jkldsafjk
 
     <button uiSref="people">Close</button>
 `})

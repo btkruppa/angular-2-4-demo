@@ -1,6 +1,7 @@
 import {Hello} from './components/hello.component';
 import {About} from './components/about.component';
 import {People} from './components/people.component';
+import {AllPeopleComponent} from './all-people/all-people.component';
 import {Person} from './components/person.component';
 import {PeopleService} from './services/people.service';
 import {Transition} from '@uirouter/angular';
@@ -22,6 +23,12 @@ export const peopleState = {
     }
   ]
 };
+
+export const allPeopleState = {
+  name: 'allPeople',
+  url: '/all-people',
+  component: AllPeopleComponent,
+}
 
 export function getPeople(peopleSvc: PeopleService) {
   return peopleSvc.getAllPeople();

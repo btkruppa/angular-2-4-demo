@@ -17,11 +17,12 @@ import {People} from './components/people.component';
 import {Person} from './components/person.component';
 import {PeopleService} from './services/people.service';
 import {uiRouterConfigFn} from './router.config';
-import {helloState, aboutState, peopleState, personState} from './states';
+import {helloState, aboutState, peopleState, personState, allPeopleState} from './states';
+import { AllPeopleComponent } from './all-people/all-people.component';
 
 
 
-const INITIAL_STATES =  [ helloState, aboutState, peopleState, personState ];
+const INITIAL_STATES =  [ helloState, aboutState, peopleState, personState, allPeopleState];
 const INITIAL_COMPONENTS =  [ App, Hello, About, People, Person ];
 
 @NgModule({
@@ -38,7 +39,7 @@ const INITIAL_COMPONENTS =  [ App, Hello, About, People, Person ];
   declarations: [
     AppComponent,
     NewComponentComponent,
-    App, Hello, About, People, Person
+    App, Hello, About, People, Person, AllPeopleComponent
   ],
   providers: [
     { provide: PeopleService, useClass: PeopleService },
